@@ -8,7 +8,7 @@ def optimize(func: Callable[[np.ndarray], float], boundaries: List[float] = None
              graphics=False, **kwargs):
     if method == OPT_METHODS.GENETIC:
         # TODO: implement
-        pass
+        raise NotImplementedError
 
     if method == OPT_METHODS.GRAD_DESC:
         from .gradient_descent import GradientDescent
