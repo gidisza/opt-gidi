@@ -7,11 +7,11 @@ class Parabola:
         pass
 
     def __call__(self, input_arr: np.ndarray):
-        if len(input_arr.shape) != 1:
-            raise Exception("array must be 1D!")
+        # if len(input_arr.shape) != 1:
+        #     raise Exception("array must be 1D!")
+        #
+        # if input_arr.shape[0] != self._variables_num:
+        #     raise Exception(
+        #         f"number of params is not equal to function params which is {self._variables_num}")
 
-        if input_arr.shape[0] != self._variables_num:
-            raise Exception(
-                f"number of params is not equal to function params which is {self._variables_num}")
-
-        return (input_arr ** 2).sum()
+        return (np.array(input_arr) ** 2).sum(axis =0)
